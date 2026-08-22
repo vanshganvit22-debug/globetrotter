@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GlobeTrotter - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fff8f0",
+                    "on-secondary-container": "#636262",
+                    "on-tertiary-fixed": "#1d1c16",
+                    "surface-container-highest": "#e8e2d9",
+                    "on-background": "#1d1b16",
+                    "on-surface": "#1d1b16",
+                    "inverse-on-surface": "#f6f0e7",
+                    "secondary-container": "#e2dfde",
+                    "surface-dim": "#dfd9d1",
+                    "primary": "#735b25",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#261a00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#615e57",
+                    "on-secondary-fixed-variant": "#474746",
+                    "surface-variant": "#e8e2d9",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#37362f",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#49473f",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface": "#fff8f0",
+                    "on-primary-container": "#463300",
+                    "on-primary-fixed-variant": "#59440f",
+                    "secondary-fixed": "#e5e2e1",
+                    "surface-container-high": "#eee7df",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "surface-container": "#f3ede4",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#cac6bd",
+                    "primary-fixed": "#ffdf9e",
+                    "tertiary-container": "#a29e95",
+                    "primary-fixed-dim": "#e2c382",
+                    "outline": "#7e7668",
+                    "surface-bright": "#fff8f0",
+                    "primary-container": "#b89b5e",
+                    "inverse-surface": "#33302a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f9f3ea",
+                    "on-surface-variant": "#4d463a",
+                    "tertiary-fixed": "#e7e2d8",
+                    "outline-variant": "#d0c5b5",
+                    "inverse-primary": "#e2c382",
+                    "surface-tint": "#735b25"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "margin-mobile": "16px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "max-width": "1440px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "display-md": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-md": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- Linear/Transactional page - navigation shell is suppressed as per rules -->
+<main class="flex-grow flex w-full">
+<div class="flex flex-col md:flex-row w-full h-screen">
+<!-- Left Side: Image -->
+<div class="hidden md:block w-full md:w-1/2 lg:w-7/12 h-full relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A breathtaking, wide-angle cinematic shot of a luxury stone villa in the rolling hills of Tuscany during golden hour. The warm sunlight casts long shadows across lush green vineyards and cypress trees. The mood is serene, aspirational, and deeply rooted in classic luxury travel. The aesthetic is editorial and high-end, utilizing natural earthy tones with a subtle warm vintage grade." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8hh7BjrL5xu-mCVaOSY2cWqM0C_nYHI6ttqiF7MvOPkFX_oxjeNUvxll8OfGl-UDtYvGOfS_RDaknC25GLKYF0gbgKyDz6X6l1FTBRrmQp3bSUG2-5r8FR5n842QZvPg6ocO2CypSWrNOM1pGCaHjeTV_UwWaar-apHPx7BeqQW_pMLkrVaV_xZE54HVgPPw3mhAEC0O5FXC1e55e3Ok-9XaCQptUZ9p6k91lSGjdm_irWb3CmSy3bg')"></div>
+<!-- Subtle gradient overlay for editorial feel -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full md:w-1/2 lg:w-5/12 h-full flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-xl bg-background overflow-y-auto">
+<div class="w-full max-w-md mx-auto flex flex-col">
+<!-- Logo -->
+<div class="mb-xl">
+<span class="font-display-md text-headline-md tracking-tight text-on-surface">GlobeTrotter</span>
+</div>
+<!-- Headings -->
+<div class="mb-lg">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">Welcome Back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to continue your journey.</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-md">
+<!-- Email Input -->
+<div class="relative flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-xs" for="email">Email Address</label>
+<input class="bg-transparent border-0 border-b border-on-surface py-sm px-0 focus:ring-0 focus:border-primary-container font-body-md text-body-md text-on-surface transition-colors duration-200" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+</div>
+<!-- Password Input -->
+<div class="relative flex flex-col mt-sm">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-xs" for="password">Password</label>
+<input class="bg-transparent border-0 border-b border-on-surface py-sm px-0 focus:ring-0 focus:border-primary-container font-body-md text-body-md text-on-surface transition-colors duration-200" id="password" name="password" placeholder="Enter your password" required="" type="password"/>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end mt-xs">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Forgot Password?</a>
+</div>
+<!-- Sign In Button -->
+<button class="mt-lg w-full bg-primary-container text-on-primary-container py-sm px-md rounded font-label-md text-label-md hover:opacity-90 transition-opacity duration-200 shadow-sm flex items-center justify-center gap-base" type="submit">
+                            Sign In
+                        </button>
+</form>
+<!-- Register Link -->
+<div class="mt-xl text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Need an account? <a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors duration-200 underline underline-offset-4 decoration-1" href="#">Register</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
