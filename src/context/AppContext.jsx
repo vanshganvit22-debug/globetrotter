@@ -6,15 +6,47 @@ const AppContext = createContext(null);
 
 export const AppProvider = ({ children }) => {
   const [currentScreen, setCurrentScreen] = useState('auth');
-  const [user, setUser] = useState({
-    name: 'Alexander Wright',
-    email: 'alexander.wright@globetrotter.io',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
-    currency: 'USD ($)',
-    language: 'English (US)',
-    homeAirport: 'JFK - New York',
-    role: 'Explorer'
+  
+  // Persisted or initial user state
+  const [user, setUser] = useState(() => {
+    try {
+      const savedUser = localStorage.getItem('globetrotter_user');
+      if (savedUser) return JSON.parse(savedUser);
+    } catch (e) {
+      console.warn('Error reading saved user', e);
+    }
+    return {
+      name: 'Vansh Ganvit',
+      email: 'vansh.ganvit@globetrotter.io',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop',
+      currency: 'INR (₹)',
+      language: 'English (India)',
+      homeAirport: 'BOM - Chhatrapati Shivaji Maharaj Intl, Mumbai',
+      role: 'Lead Explorer'
+    };
   });
+
+  // Save user changes to localStorage
+  const updateUserProfile = (newProps) => {
+    setUser((prev) => {
+      const updated = { ...prev, ...newProps };
+      try {
+        localStorage.setItem('globetrotter_user', JSON.stringify(updated));
+      } catch (e) {
+        console.warn('Error saving user to localStorage', e);
+      }
+      return updated;
+    });
+  };
+
+  const updateUserAvatar = (avatarDataUrl) => {
+    updateUserProfile({ avatar: avatarDataUrl });
+  };
+
+  const formatINR = (amt) => {
+    if (amt === undefined || amt === null || isNaN(Number(amt))) return '₹0';
+    return `₹${Number(amt).toLocaleString('en-IN')}`;
+  };
   
   const [trips, setTrips] = useState(initialTrips);
   const [activeTripId, setActiveTripId] = useState('trip-1');
@@ -186,6 +218,9 @@ export const AppProvider = ({ children }) => {
         navigateTo,
         user,
         setUser,
+        updateUserProfile,
+        updateUserAvatar,
+        formatINR,
         trips,
         activeTrip,
         activeTripId,

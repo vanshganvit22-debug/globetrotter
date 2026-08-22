@@ -106,7 +106,7 @@ export const PublicItineraryPage = () => {
             <DollarSign className="w-4 h-4 text-[#caa560]" />
             <div>
               <span className="meta-sub">Estimated Budget</span>
-              <span className="meta-val">${activeTrip.budget?.toLocaleString()} USD</span>
+              <span className="meta-val">₹{activeTrip.budget?.toLocaleString('en-IN')} INR</span>
             </div>
           </div>
         </div>

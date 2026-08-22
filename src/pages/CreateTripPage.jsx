@@ -211,7 +211,7 @@ export const CreateTripPage = () => {
 
             <div className="form-group">
               <label className="form-label" htmlFor="trip-budget">
-                Estimated Budget ($ USD)
+                Estimated Budget (₹ INR)
               </label>
               <div className="input-wrapper">
                 <span className="input-icon-left">
@@ -221,7 +221,7 @@ export const CreateTripPage = () => {
                   id="trip-budget"
                   type="number"
                   className="form-input"
-                  placeholder="3000"
+                  placeholder="50000"
                   value={formData.budget}
                   onChange={(e) => setFormData({ ...formData, budget: Number(e.target.value) })}
                 />
@@ -339,7 +339,7 @@ export const CreateTripPage = () => {
                   <span>{formData.startDate} &bull; {formData.endDate}</span>
                 </div>
                 <div className="destinations-pill mt-3">
-                  <span>${formData.budget?.toLocaleString() || 0} Target Budget</span>
+                  <span>₹{formData.budget?.toLocaleString('en-IN') || 0} Target Budget</span>
                 </div>
               </div>
             </div>

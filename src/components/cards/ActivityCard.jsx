@@ -48,7 +48,7 @@ export const ActivityCard = ({ activity, onAddActivity }) => {
             <span>{activity.duration}</span>
           </div>
           <div className="meta-item cost-badge">
-            <span>{activity.cost === 0 ? 'Free Entry' : `$${activity.cost}/person`}</span>
+            <span>{activity.cost === 0 ? 'Free Entry' : `₹${Number(activity.cost).toLocaleString('en-IN')}/person`}</span>
           </div>
         </div>
 

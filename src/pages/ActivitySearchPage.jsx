@@ -31,8 +31,9 @@ export const ActivitySearchPage = () => {
     const matchesCost =
       selectedCostRange === 'All' ||
       (selectedCostRange === 'Free' && act.cost === 0) ||
-      (selectedCostRange === '< $100' && act.cost < 100) ||
-      (selectedCostRange === '$100+' && act.cost >= 100);
+      (selectedCostRange === '< ₹1,000' && act.cost < 1000) ||
+      (selectedCostRange === '₹1,000 - ₹3,000' && act.cost >= 1000 && act.cost <= 3000) ||
+      (selectedCostRange === '₹3,000+' && act.cost > 3000);
 
     return matchesSearch && matchesCategory && matchesCost;
   });
@@ -43,7 +44,7 @@ export const ActivitySearchPage = () => {
         <span className="section-eyebrow">Experience Catalog</span>
         <h1 className="section-heading">Discover Tailored Activities</h1>
         <p className="section-subtitle">
-          Browse private tours, culinary masterclasses, outdoor expeditions, and secret vantage points.
+          Browse private tours, culinary masterclasses, outdoor expeditions, and sacred heritage walks.
         </p>
 
         {/* Big Search Input */}
@@ -51,7 +52,7 @@ export const ActivitySearchPage = () => {
           <Search className="w-5 h-5 text-slate-400" />
           <input
             type="text"
-            placeholder="Search activities (e.g. Pasta masterclass, Hot air balloon, Uffizi)..."
+            placeholder="Search activities (e.g. Taj Mahal VIP, Hot air balloon, Langar seva)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="big-search-input"
@@ -85,7 +86,7 @@ export const ActivitySearchPage = () => {
           <div className="filter-inline">
             <span className="filter-group-label">Cost:</span>
             <div className="filter-chips-list">
-              {['All', 'Free', '< $100', '$100+'].map((cost) => (
+              {['All', 'Free', '< ₹1,000', '₹1,000 - ₹3,000', '₹3,000+'].map((cost) => (
                 <button
                   key={cost}
                   onClick={() => setSelectedCostRange(cost)}

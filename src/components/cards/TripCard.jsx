@@ -61,8 +61,8 @@ export const TripCard = ({ trip }) => {
         {/* Budget Progress Bar */}
         <div className="trip-budget-progress">
           <div className="budget-labels">
-            <span className="budget-spent">${trip.spent?.toLocaleString() || 0} spent</span>
-            <span className="budget-total">of ${trip.budget?.toLocaleString()}</span>
+            <span className="budget-spent">₹{trip.spent?.toLocaleString('en-IN') || 0} spent</span>
+            <span className="budget-total">of ₹{trip.budget?.toLocaleString('en-IN')}</span>
           </div>
           <div className="progress-track">
             <div

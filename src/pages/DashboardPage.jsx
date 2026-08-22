@@ -88,7 +88,7 @@ export const DashboardPage = () => {
               </div>
               <div className="meta-pill">
                 <DollarSign className="w-4 h-4 text-[#caa560]" />
-                <span>${activeTrip.spent?.toLocaleString()} of ${activeTrip.budget?.toLocaleString()} Budget</span>
+                <span>₹{activeTrip.spent?.toLocaleString('en-IN')} of ₹{activeTrip.budget?.toLocaleString('en-IN')} Budget</span>
               </div>
             </div>
             <div className="banner-actions">
@@ -127,15 +127,15 @@ export const DashboardPage = () => {
           <div className="budget-numbers-grid">
             <div className="budget-stat-item">
               <span className="stat-label">Total Planned</span>
-              <span className="stat-value">${totalPlannedBudget.toLocaleString()}</span>
+              <span className="stat-value">₹{totalPlannedBudget.toLocaleString('en-IN')}</span>
             </div>
             <div className="budget-stat-item">
               <span className="stat-label">Amount Spent</span>
-              <span className="stat-value text-navy">${totalSpent.toLocaleString()}</span>
+              <span className="stat-value text-navy">₹{totalSpent.toLocaleString('en-IN')}</span>
             </div>
             <div className="budget-stat-item">
               <span className="stat-label">Remaining</span>
-              <span className="stat-value text-gold">${remainingBudget.toLocaleString()}</span>
+              <span className="stat-value text-gold">₹{remainingBudget.toLocaleString('en-IN')}</span>
             </div>
           </div>
 

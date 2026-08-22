@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   User,
   Mail,
@@ -7,35 +7,60 @@ import {
   Plane,
   Bookmark,
   Shield,
-  Bell,
-  Lock,
   Trash2,
-  Check
+  Check,
+  Camera,
+  Upload,
+  Sparkles,
+  Image as ImageIcon
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { DestinationCard } from '../components/cards/DestinationCard';
 
 export const ProfilePage = () => {
-  const { user, setUser, savedDestinations, mockDestinations, showToast, openModal } = useApp();
+  const { user, updateUserProfile, updateUserAvatar, savedDestinations, mockDestinations, showToast, openModal } = useApp();
+  const fileInputRef = useRef(null);
 
   const [formData, setFormData] = useState({
-    name: user?.name || 'Alexander Wright',
-    email: user?.email || 'alexander.wright@globetrotter.io',
-    currency: user?.currency || 'USD ($)',
-    language: user?.language || 'English (US)',
-    homeAirport: user?.homeAirport || 'JFK - New York',
+    name: user?.name || 'Vansh Ganvit',
+    email: user?.email || 'vansh.ganvit@globetrotter.io',
+    currency: user?.currency || 'INR (₹)',
+    language: user?.language || 'English (India)',
+    homeAirport: user?.homeAirport || 'BOM - Mumbai',
   });
 
   const [activeTab, setActiveTab] = useState('profile'); // 'profile' | 'saved' | 'security'
 
   const savedList = mockDestinations.filter((d) => savedDestinations.includes(d.id));
 
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        showToast('Photo size must be less than 5MB', 'error');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const photoUrl = event.target?.result;
+        if (photoUrl) {
+          updateUserAvatar(photoUrl);
+          showToast('Profile photo updated successfully from gallery!');
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleTriggerUpload = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
   const handleSaveProfile = (e) => {
     e.preventDefault();
-    setUser((prev) => ({
-      ...prev,
-      ...formData
-    }));
+    updateUserProfile(formData);
     showToast('Profile and preferences updated successfully!');
   };
 
@@ -54,22 +79,52 @@ export const ProfilePage = () => {
 
   return (
     <div className="page-container profile-page">
+      {/* Hidden Gallery File Input */}
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handlePhotoUpload}
+        accept="image/*"
+        style={{ display: 'none' }}
+      />
+
       {/* Header Profile Bar */}
       <div className="profile-hero-card">
-        <div className="profile-avatar-wrap">
+        <div className="profile-avatar-wrap" onClick={handleTriggerUpload} title="Click to change photo from gallery">
           <img
-            src={user?.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop'}
+            src={user?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop'}
             alt="Profile Avatar"
             className="profile-avatar-large"
           />
-          <span className="profile-badge-pill">Explorer Level 4</span>
+          <button
+            type="button"
+            className="profile-avatar-camera-btn"
+            aria-label="Upload photo from gallery"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleTriggerUpload();
+            }}
+          >
+            <Camera className="w-4 h-4 text-white" />
+          </button>
+          <span className="profile-badge-pill">Lead Explorer</span>
         </div>
+
         <div className="profile-hero-details">
-          <h1 className="profile-name">{user?.name}</h1>
-          <p className="profile-email">{user?.email}</p>
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <div>
+              <h1 className="profile-name">{user?.name}</h1>
+              <p className="profile-email">{user?.email}</p>
+            </div>
+            <button onClick={handleTriggerUpload} className="btn-edit-photo">
+              <Upload className="w-3.5 h-3.5" />
+              <span>Edit Photo (Gallery)</span>
+            </button>
+          </div>
+
           <div className="profile-tags-row">
-            <span className="pref-tag-badge">Home: {user?.homeAirport || 'JFK'}</span>
-            <span className="pref-tag-badge">Currency: {user?.currency || 'USD'}</span>
+            <span className="pref-tag-badge">Home: {user?.homeAirport || 'BOM'}</span>
+            <span className="pref-tag-badge">Currency: {user?.currency || 'INR (₹)'}</span>
             <span className="pref-tag-badge">{savedDestinations.length} Bucket List Places</span>
           </div>
         </div>
@@ -149,10 +204,12 @@ export const ProfilePage = () => {
                   value={formData.currency}
                   onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
                 >
+                  <option value="INR (₹)">INR (₹) - Indian Rupee</option>
                   <option value="USD ($)">USD ($) - US Dollar</option>
                   <option value="EUR (€)">EUR (€) - Euro</option>
                   <option value="GBP (£)">GBP (£) - British Pound</option>
                   <option value="JPY (¥)">JPY (¥) - Japanese Yen</option>
+                  <option value="AED (د.إ)">AED (د.إ) - UAE Dirham</option>
                 </select>
               </div>
             </div>

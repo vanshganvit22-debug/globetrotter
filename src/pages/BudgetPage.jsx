@@ -79,20 +79,20 @@ export const BudgetPage = () => {
       <div className="budget-kpis-grid">
         <div className="budget-kpi-card">
           <span className="kpi-label">Total Allocated Budget</span>
-          <span className="kpi-value text-navy">${budget.toLocaleString()}</span>
-          <span className="kpi-sub">${dailyTarget}/day planned allowance</span>
+          <span className="kpi-value text-navy">₹{budget.toLocaleString('en-IN')}</span>
+          <span className="kpi-sub">₹{dailyTarget.toLocaleString('en-IN')}/day planned allowance</span>
         </div>
 
         <div className="budget-kpi-card">
           <span className="kpi-label">Total Incurred Cost</span>
-          <span className="kpi-value text-gold">${spent.toLocaleString()}</span>
-          <span className="kpi-sub">${dailyAvg}/day average so far</span>
+          <span className="kpi-value text-gold">₹{spent.toLocaleString('en-IN')}</span>
+          <span className="kpi-sub">₹{dailyAvg.toLocaleString('en-IN')}/day average so far</span>
         </div>
 
         <div className="budget-kpi-card">
           <span className="kpi-label">Remaining Balance</span>
           <span className={`kpi-value ${remaining >= 0 ? 'text-emerald-700' : 'text-rose-600'}`}>
-            ${remaining.toLocaleString()}
+            ₹{remaining.toLocaleString('en-IN')}
           </span>
           <span className="kpi-sub">{100 - percentUsed}% of funds available</span>
         </div>
@@ -130,8 +130,8 @@ export const BudgetPage = () => {
                       <span className="cat-name">{cat.name}</span>
                     </div>
                     <div className="cat-values">
-                      <span className="cat-spent">${cat.spent.toLocaleString()}</span>
-                      <span className="cat-target">/ ${cat.target.toLocaleString()} target</span>
+                      <span className="cat-spent">₹{cat.spent.toLocaleString('en-IN')}</span>
+                      <span className="cat-target">/ ₹{cat.target.toLocaleString('en-IN')} target</span>
                     </div>
                   </div>
                   <div className="progress-track">
@@ -161,7 +161,7 @@ export const BudgetPage = () => {
                       <span className="text-xs text-slate-500">{stop.activities?.length || 0} paid experiences</span>
                     </div>
                   </div>
-                  <span className="stop-cost-amount">${stopTotal.toLocaleString()}</span>
+                  <span className="stop-cost-amount">₹{stopTotal.toLocaleString('en-IN')}</span>
                 </div>
               );
             })}

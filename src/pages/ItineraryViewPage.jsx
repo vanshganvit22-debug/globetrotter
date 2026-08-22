@@ -61,7 +61,7 @@ export const ItineraryViewPage = () => {
             </div>
             <div className="stat-pill">
               <DollarSign className="w-4 h-4 text-[#caa560]" />
-              <span>${activeTrip.spent?.toLocaleString()} Spent &bull; ${activeTrip.budget?.toLocaleString()} Budget</span>
+              <span>₹{activeTrip.spent?.toLocaleString('en-IN')} Spent &bull; ₹{activeTrip.budget?.toLocaleString('en-IN')} Budget</span>
             </div>
           </div>
 
@@ -164,7 +164,7 @@ export const ItineraryViewPage = () => {
                           </div>
                           <div className="meta-cost">
                             <span className="cost-tag">
-                              {act.cost === 0 ? 'Free Experience' : `$${act.cost}`}
+                              {act.cost === 0 ? 'Free Experience' : `₹${Number(act.cost).toLocaleString('en-IN')}`}
                             </span>
                           </div>
                         </div>

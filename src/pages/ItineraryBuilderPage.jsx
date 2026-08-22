@@ -124,7 +124,7 @@ export const ItineraryBuilderPage = () => {
             </span>
             <span className="meta-pill">
               <DollarSign className="w-3.5 h-3.5 text-[#caa560]" />
-              ${activeTrip.spent?.toLocaleString()} spent / ${activeTrip.budget?.toLocaleString()} target
+              ₹{activeTrip.spent?.toLocaleString('en-IN')} spent / ₹{activeTrip.budget?.toLocaleString('en-IN')} target
             </span>
           </div>
         </div>
@@ -237,7 +237,7 @@ export const ItineraryBuilderPage = () => {
                       </div>
                       <div className="act-right-controls">
                         <span className="act-cost-label">
-                          {act.cost === 0 ? 'Free' : `$${act.cost}`}
+                          {act.cost === 0 ? 'Free' : `₹${Number(act.cost).toLocaleString('en-IN')}`}
                         </span>
                         <button
                           onClick={() => handleDeleteActivity(currentStop.id, act.id)}
@@ -399,10 +399,10 @@ export const ItineraryBuilderPage = () => {
                   </select>
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Cost ($ USD)</label>
+                  <label className="form-label">Cost (₹ INR)</label>
                   <input
                     type="number"
-                    placeholder="45"
+                    placeholder="1200"
                     value={newActivity.cost}
                     onChange={(e) => setNewActivity({ ...newActivity, cost: Number(e.target.value) })}
                     className="form-input"

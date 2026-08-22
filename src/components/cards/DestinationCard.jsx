@@ -26,7 +26,7 @@ export const DestinationCard = ({ destination }) => {
         <img src={destination.image} alt={destination.city} className="dest-img-cover" />
         <div className="dest-media-overlay"></div>
         <div className="dest-top-badges">
-          <span className="dest-cost-pill">{destination.costIndex} &bull; ${destination.avgDailyCost}/day</span>
+          <span className="dest-cost-pill">{destination.costIndex} &bull; ₹{destination.avgDailyCost?.toLocaleString('en-IN')}/day</span>
           <button
             onClick={(e) => {
               e.stopPropagation();
