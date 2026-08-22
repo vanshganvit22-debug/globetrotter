@@ -3,7 +3,7 @@ import { Logo } from '../components/Logo';
 import { AuthCard } from '../components/AuthCard';
 import { FeatureHighlights } from '../components/FeatureHighlights';
 import { WatermarkBackground } from '../components/WatermarkBackground';
-import { Globe2 } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 export const AuthPage = () => {
@@ -37,19 +37,34 @@ export const AuthPage = () => {
             {mode === 'forgot' && 'Reset Access'}
           </h1>
           <p className="hero-subtitle">
-            {mode === 'login' &&
-              'Sign in to continue your journey and explore the world with GlobeTrotter.'}
-            {mode === 'register' &&
-              'Create an account to unlock tailored itineraries, secret spots, and wanderlust adventures.'}
-            {mode === 'forgot' &&
-              'Enter your email address and we will help you get back to exploring the globe.'}
+            {mode === 'login' && (
+              <>
+                Sign in to continue your journey
+                <br />
+                and explore the world with GlobeTrotter.
+              </>
+            )}
+            {mode === 'register' && (
+              <>
+                Create an account to unlock tailored itineraries,
+                <br />
+                secret spots, and wanderlust adventures.
+              </>
+            )}
+            {mode === 'forgot' && (
+              <>
+                Enter your email address and we will help you
+                <br />
+                get back to exploring the globe.
+              </>
+            )}
           </p>
         </div>
 
         <div className="hero-footer-badge">
           <div className="badge-glass-pill">
             <div className="badge-icon-wrap">
-              <Globe2 className="w-5 h-5 text-[#caa560]" />
+              <Globe className="w-4 h-4 text-white" />
             </div>
             <div className="badge-text-wrap">
               <span className="badge-main-text">
@@ -66,7 +81,7 @@ export const AuthPage = () => {
         <div className="curved-divider" aria-hidden="true">
           <svg viewBox="0 0 100 1000" preserveAspectRatio="none" className="curved-divider-svg">
             <path
-              d="M 100 0 C 15 250, 85 450, 10 700 C -35 860, 20 950, 100 1000 L 100 0 Z"
+              d="M 100 0 C 25 220, 65 480, 15 720 C -15 850, 35 940, 100 1000 L 100 0 Z"
               fill="#f8f6f2"
             />
           </svg>
@@ -91,3 +106,4 @@ export const AuthPage = () => {
     </div>
   );
 };
+

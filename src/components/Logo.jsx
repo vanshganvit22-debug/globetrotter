@@ -10,7 +10,7 @@ export const Logo = ({ light = false, className = '' }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="20" cy="20" r="18" stroke="#c09a56" strokeWidth="1.5" strokeDasharray="1 1" />
+        <circle cx="20" cy="20" r="18" stroke="#c09a56" strokeWidth="1.5" strokeDasharray="1.5 2" />
         <circle cx="20" cy="20" r="15" stroke="#b88f48" strokeWidth="1.2" />
         
         {/* Main 4 Compass Points */}
@@ -27,13 +27,17 @@ export const Logo = ({ light = false, className = '' }) => {
         <polygon points="4,20 20,20 17,23" fill="#8c6a2d" />
 
         {/* Secondary 4 Points */}
-        <polygon points="31,9 22,18 20,20 20,20" fill="#9e7b39" opacity="0.8" />
-        <polygon points="31,31 22,22 20,20 20,20" fill="#9e7b39" opacity="0.8" />
-        <polygon points="9,31 18,22 20,20 20,20" fill="#9e7b39" opacity="0.8" />
-        <polygon points="9,9 18,18 20,20 20,20" fill="#9e7b39" opacity="0.8" />
+        <polygon points="31,9 22,18 20,20 20,20" fill="#caa560" opacity="0.85" />
+        <polygon points="31,9 20,20 20,20 22,18" fill="#8c6a2d" opacity="0.85" />
+        <polygon points="31,31 22,22 20,20 20,20" fill="#caa560" opacity="0.85" />
+        <polygon points="31,31 20,20 20,20 22,22" fill="#8c6a2d" opacity="0.85" />
+        <polygon points="9,31 18,22 20,20 20,20" fill="#caa560" opacity="0.85" />
+        <polygon points="9,31 20,20 20,20 18,22" fill="#8c6a2d" opacity="0.85" />
+        <polygon points="9,9 18,18 20,20 20,20" fill="#caa560" opacity="0.85" />
+        <polygon points="9,9 20,20 20,20 18,18" fill="#8c6a2d" opacity="0.85" />
 
         {/* Center Pivot */}
-        <circle cx="20" cy="20" r="2.5" fill="#fdfcf7" stroke="#684f22" strokeWidth="1" />
+        <circle cx="20" cy="20" r="2.8" fill="#ffffff" stroke="#caa560" strokeWidth="1.5" />
       </svg>
       
       <span className={`brand-name-text ${light ? 'text-white' : 'text-navy'}`}>
@@ -42,3 +46,4 @@ export const Logo = ({ light = false, className = '' }) => {
     </div>
   );
 };
+
