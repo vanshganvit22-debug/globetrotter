@@ -1,0 +1,453 @@
+// Mock Data for GlobeTrotter Application
+
+export const initialTrips = [
+  {
+    id: 'trip-1',
+    title: 'Italian Renaissance & Vineyards',
+    destination: 'Tuscany & Florence, Italy',
+    startDate: '2026-09-10',
+    endDate: '2026-09-18',
+    days: 8,
+    status: 'ongoing',
+    coverImage: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1200&auto=format&fit=crop',
+    budget: 3400,
+    spent: 1850,
+    destinationsCount: 3,
+    description: 'Scenic road trip through rolling Val d’Orcia hills, medieval hill-top towns, Chianti vineyards, and Florence art museums.',
+    travelStyle: ['Culture', 'Culinary', 'Relaxation'],
+    stops: [
+      {
+        id: 'stop-1',
+        city: 'Florence',
+        country: 'Italy',
+        arrivalDate: '2026-09-10',
+        departureDate: '2026-09-13',
+        image: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=600&auto=format&fit=crop',
+        activities: [
+          {
+            id: 'act-1',
+            time: '09:00 AM',
+            title: 'Uffizi Gallery Private Tour',
+            location: 'Piazzale degli Uffizi, 6',
+            cost: 85,
+            category: 'Culture',
+            period: 'Morning',
+            notes: 'Pre-booked skip-the-line tickets at Gate 3.',
+          },
+          {
+            id: 'act-2',
+            time: '01:30 PM',
+            title: 'Authentic Pasta Masterclass',
+            location: 'Trattoria Mario, San Lorenzo',
+            cost: 65,
+            category: 'Food',
+            period: 'Afternoon',
+            notes: 'Handmade tagliatelle & tiramisu workshop.',
+          },
+          {
+            id: 'act-3',
+            time: '06:30 PM',
+            title: 'Sunset at Piazzale Michelangelo',
+            location: 'Piazzale Michelangelo',
+            cost: 0,
+            category: 'Sightseeing',
+            period: 'Evening',
+            notes: 'Panoramic view over Florence with Chianti wine.',
+          }
+        ]
+      },
+      {
+        id: 'stop-2',
+        city: 'Siena & Val d’Orcia',
+        country: 'Italy',
+        arrivalDate: '2026-09-13',
+        departureDate: '2026-09-16',
+        image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=600&auto=format&fit=crop',
+        activities: [
+          {
+            id: 'act-4',
+            time: '10:00 AM',
+            title: 'Piazza del Campo & Torre del Mangia',
+            location: 'Piazza del Campo, Siena',
+            cost: 25,
+            category: 'Culture',
+            period: 'Morning',
+            notes: 'Climb 400 steps for medieval vista.',
+          },
+          {
+            id: 'act-5',
+            time: '02:00 PM',
+            title: 'Montepulciano Wine Tasting Estate',
+            location: 'Cantina de’ Ricci',
+            cost: 90,
+            category: 'Food',
+            period: 'Afternoon',
+            notes: 'Vintage Brunello di Montalcino pairing.',
+          }
+        ]
+      },
+      {
+        id: 'stop-3',
+        city: 'San Gimignano',
+        country: 'Italy',
+        arrivalDate: '2026-09-16',
+        departureDate: '2026-09-18',
+        image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop',
+        activities: [
+          {
+            id: 'act-6',
+            time: '11:00 AM',
+            title: 'Medieval Tower Walk & Dondoli Gelato',
+            location: 'Piazza della Cisterna',
+            cost: 15,
+            category: 'Sightseeing',
+            period: 'Morning',
+            notes: 'World champion saffron & pine nut gelato.',
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'trip-2',
+    title: 'Kyoto Autumn Temples & Tea Gardens',
+    destination: 'Kyoto & Osaka, Japan',
+    startDate: '2026-10-15',
+    endDate: '2026-10-25',
+    days: 10,
+    status: 'upcoming',
+    coverImage: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1200&auto=format&fit=crop',
+    budget: 4200,
+    spent: 1200,
+    destinationsCount: 2,
+    description: 'Immerse in tranquil Zen gardens, Fushimi Inari torii shrines, traditional ryokans, and culinary streets of Dotonbori.',
+    travelStyle: ['Culture', 'Nature', 'Photography'],
+    stops: [
+      {
+        id: 'stop-jp-1',
+        city: 'Kyoto',
+        country: 'Japan',
+        arrivalDate: '2026-10-15',
+        departureDate: '2026-10-21',
+        image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop',
+        activities: [
+          {
+            id: 'act-jp-1',
+            time: '07:30 AM',
+            title: 'Fushimi Inari Early Morning Hike',
+            location: 'Fushimi Ward, Kyoto',
+            cost: 0,
+            category: 'Culture',
+            period: 'Morning',
+            notes: 'Beat the crowds through 10,000 orange gates.',
+          },
+          {
+            id: 'act-jp-2',
+            time: '02:00 PM',
+            title: 'Traditional Uji Matcha Ceremony',
+            location: 'Gion District',
+            cost: 55,
+            category: 'Food',
+            period: 'Afternoon',
+            notes: 'Guided by 4th-generation tea master.',
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'trip-3',
+    title: 'Swiss Alpine Glacier Express',
+    destination: 'Zermatt & Interlaken, Switzerland',
+    startDate: '2026-06-05',
+    endDate: '2026-06-12',
+    days: 7,
+    status: 'completed',
+    coverImage: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1200&auto=format&fit=crop',
+    budget: 3800,
+    spent: 3720,
+    destinationsCount: 3,
+    description: 'Spectacular mountain passes, Matterhorn views, turquoise glacier lakes, and scenic cogwheel train journeys.',
+    travelStyle: ['Adventure', 'Nature', 'Luxury'],
+    stops: []
+  }
+];
+
+export const mockDestinations = [
+  {
+    id: 'dest-1',
+    city: 'Santorini',
+    country: 'Greece',
+    region: 'Europe',
+    costIndex: '$$$$',
+    avgDailyCost: 280,
+    popularity: 98,
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop',
+    description: 'Whitewashed cliffside cubist villages overlooking deep azure Aegean caldera waters with legendary sunsets.',
+    tags: ['Romantic', 'Beaches', 'Luxury', 'Views'],
+    bestSeason: 'May - October',
+    rating: 4.9,
+  },
+  {
+    id: 'dest-2',
+    city: 'Kyoto',
+    country: 'Japan',
+    region: 'Asia',
+    costIndex: '$$$',
+    avgDailyCost: 190,
+    popularity: 96,
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop',
+    description: 'Over 1,000 Buddhist temples, tranquil moss gardens, geisha districts, and serene bamboo groves in Arashiyama.',
+    tags: ['Culture', 'History', 'Food', 'Temples'],
+    bestSeason: 'March - May / Oct - Nov',
+    rating: 4.95,
+  },
+  {
+    id: 'dest-3',
+    city: 'Banff & Lake Louise',
+    country: 'Canada',
+    region: 'North America',
+    costIndex: '$$$',
+    avgDailyCost: 220,
+    popularity: 92,
+    image: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=800&auto=format&fit=crop',
+    description: 'Towering Rocky Mountain summits surrounding vibrant electric-turquoise glacier-fed alpine waters.',
+    tags: ['Adventure', 'Nature', 'Hiking', 'Wildlife'],
+    bestSeason: 'June - September',
+    rating: 4.88,
+  },
+  {
+    id: 'dest-4',
+    city: 'Amalfi Coast',
+    country: 'Italy',
+    region: 'Europe',
+    costIndex: '$$$$',
+    avgDailyCost: 310,
+    popularity: 95,
+    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop',
+    description: 'Pastel cliffside villas cascading into the Tyrrhenian Sea, fragrant lemon groves, and winding coastal highways.',
+    tags: ['Scenic', 'Culinary', 'Coastline', 'Romantic'],
+    bestSeason: 'April - October',
+    rating: 4.92,
+  },
+  {
+    id: 'dest-5',
+    city: 'Reykjavik & Ring Road',
+    country: 'Iceland',
+    region: 'Europe',
+    costIndex: '$$$$',
+    avgDailyCost: 340,
+    popularity: 91,
+    image: 'https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=800&auto=format&fit=crop',
+    description: 'Land of fire and ice with thunderous waterfalls, black sand beaches, geothermal lagoons, and Aurora Borealis.',
+    tags: ['Adventure', 'Northern Lights', 'Geothermal', 'Road Trip'],
+    bestSeason: 'Sep - March (Auroras) / Jun - Aug',
+    rating: 4.87,
+  },
+  {
+    id: 'dest-6',
+    city: 'Chefchaouen',
+    country: 'Morocco',
+    region: 'Africa',
+    costIndex: '$$',
+    avgDailyCost: 110,
+    popularity: 88,
+    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop',
+    description: 'The famous Blue Pearl medina tucked into the Rif Mountains with vibrant leather souks and mint tea courtyards.',
+    tags: ['Culture', 'Photography', 'Budget', 'Architecture'],
+    bestSeason: 'March - May / Sep - Nov',
+    rating: 4.82,
+  },
+  {
+    id: 'dest-7',
+    city: 'Queenstown',
+    country: 'New Zealand',
+    region: 'Oceania',
+    costIndex: '$$$',
+    avgDailyCost: 240,
+    popularity: 94,
+    image: 'https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=800&auto=format&fit=crop',
+    description: 'Adventure capital nestled along Lake Wakatipu surrounded by the Remarkables mountain range and Milford Sound.',
+    tags: ['Adventure', 'Lakes', 'Hiking', 'Wine'],
+    bestSeason: 'December - March',
+    rating: 4.94,
+  },
+  {
+    id: 'dest-8',
+    city: 'Ubud & Bali Highlands',
+    country: 'Indonesia',
+    region: 'Asia',
+    costIndex: '$',
+    avgDailyCost: 85,
+    popularity: 97,
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop',
+    description: 'Emerald tiered rice terraces, sacred water temples, artisan craft villages, and holistic jungle retreats.',
+    tags: ['Wellness', 'Budget', 'Culture', 'Tropical'],
+    bestSeason: 'May - September',
+    rating: 4.89,
+  }
+];
+
+export const mockActivities = [
+  {
+    id: 'act-cat-1',
+    city: 'Florence',
+    title: 'Uffizi & Accademia VIP Small Group Pass',
+    category: 'Culture',
+    duration: '3.5 hours',
+    cost: 95,
+    rating: 4.95,
+    reviewsCount: 1420,
+    image: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=600&auto=format&fit=crop',
+    description: 'Marvel at Michelangelo’s David and Botticelli’s Birth of Venus with an art historian.',
+  },
+  {
+    id: 'act-cat-2',
+    city: 'Tuscany',
+    title: 'Hot Air Balloon Flight over Chianti Hills',
+    category: 'Adventure',
+    duration: '4 hours',
+    cost: 290,
+    rating: 4.98,
+    reviewsCount: 680,
+    image: 'https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?q=80&w=600&auto=format&fit=crop',
+    description: 'Sunrise flight above cypress trees, olive groves, and castles followed by a sparkling wine breakfast.',
+  },
+  {
+    id: 'act-cat-3',
+    city: 'Florence',
+    title: 'Tuscan Farmhouse Truffle Hunting & Cooking',
+    category: 'Food',
+    duration: '5 hours',
+    cost: 140,
+    rating: 4.92,
+    reviewsCount: 890,
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop',
+    description: 'Forage for fresh truffles in private oak woods accompanied by trained lagotto dogs.',
+  },
+  {
+    id: 'act-cat-4',
+    city: 'Santorini',
+    title: 'Catamaran Sunset Cruise with Greek BBQ',
+    category: 'Sightseeing',
+    duration: '5 hours',
+    cost: 160,
+    rating: 4.97,
+    reviewsCount: 2150,
+    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=600&auto=format&fit=crop',
+    description: 'Sail to Red Beach, White Beach, and swim in volcanic hot springs with fresh seafood grill on board.',
+  },
+  {
+    id: 'act-cat-5',
+    city: 'Kyoto',
+    title: 'Private Bamboo Grove & Zen Meditation at Dawn',
+    category: 'Nature',
+    duration: '2.5 hours',
+    cost: 75,
+    rating: 4.91,
+    reviewsCount: 540,
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop',
+    description: 'Experience pure stillness in Arashiyama before the world wakes, guided by a local Zen practitioner.',
+  },
+  {
+    id: 'act-cat-6',
+    city: 'Amalfi Coast',
+    title: 'Vintage Alfa Romeo Coastal Driving Experience',
+    category: 'Adventure',
+    duration: '6 hours',
+    cost: 320,
+    rating: 4.94,
+    reviewsCount: 310,
+    image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=600&auto=format&fit=crop',
+    description: 'Drive along the iconic curves of Positano, Praiano, and Ravello in a classic open-top convertible.',
+  }
+];
+
+export const mockCommunityPosts = [
+  {
+    id: 'post-1',
+    author: {
+      name: 'Elena Rostova',
+      handle: '@elenatravels',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+      badge: 'Verified Explorer'
+    },
+    date: '2 hours ago',
+    title: 'Secret vantage point in Val d’Orcia away from tourist crowds',
+    content: 'If you are visiting Pienza, wake up at 5:45 AM and head toward Cappella della Madonna di Vitaleta. The morning ground mist rolling over the wheat fields creates pure poetry!',
+    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop',
+    destination: 'Tuscany, Italy',
+    likes: 342,
+    comments: 48,
+    saves: 112,
+    tags: ['Tuscany', 'Photography', 'SecretSpot']
+  },
+  {
+    id: 'post-2',
+    author: {
+      name: 'Kenji Takahashi',
+      handle: '@kenji_journeys',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
+      badge: 'Local Curator'
+    },
+    date: 'Yesterday',
+    title: '7-Day slow travel itinerary for Kyoto during maple season',
+    content: 'Sharing my complete autumn guide! Includes little-known sub-temples like Enko-ji and Gio-ji where you can enjoy tea overlooking moss gardens without lines.',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop',
+    destination: 'Kyoto, Japan',
+    likes: 589,
+    comments: 76,
+    saves: 245,
+    tags: ['Japan', 'Itinerary', 'Autumn']
+  },
+  {
+    id: 'post-3',
+    author: {
+      name: 'Sophia Laurent',
+      handle: '@sophia_escapes',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
+      badge: 'Adventure Writer'
+    },
+    date: '3 days ago',
+    title: 'Budgeting for Santorini without compromising on luxury',
+    content: 'Staying in Imerovigli instead of Oia saved us nearly 40% on caldera view suites while giving us the most peaceful sunsets on the island. Here is our full breakdown.',
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop',
+    destination: 'Santorini, Greece',
+    likes: 421,
+    comments: 63,
+    saves: 198,
+    tags: ['Budgeting', 'Santorini', 'LuxuryTips']
+  }
+];
+
+export const mockAdminStats = {
+  totalUsers: '28,450',
+  totalTrips: '46,120',
+  activeUsers: '14,230',
+  avgTripDuration: '6.4 Days',
+  userGrowth: [
+    { month: 'May', users: 18200 },
+    { month: 'Jun', users: 21400 },
+    { month: 'Jul', users: 24900 },
+    { month: 'Aug', users: 28450 }
+  ],
+  tripsGrowth: [
+    { month: 'May', count: 31000 },
+    { month: 'Jun', count: 36500 },
+    { month: 'Jul', count: 41200 },
+    { month: 'Aug', count: 46120 }
+  ],
+  popularCities: [
+    { name: 'Florence & Tuscany', country: 'Italy', trips: 14200, growth: '+18%' },
+    { name: 'Kyoto', country: 'Japan', trips: 11800, growth: '+24%' },
+    { name: 'Santorini', country: 'Greece', trips: 9600, growth: '+12%' },
+    { name: 'Amalfi Coast', country: 'Italy', trips: 8400, growth: '+15%' },
+    { name: 'Banff National Park', country: 'Canada', trips: 7200, growth: '+9%' }
+  ],
+  recentUsersList: [
+    { id: 'usr-1', name: 'Marcus Sterling', email: 'marcus@example.com', tripsCount: 4, joined: 'Aug 18, 2026', role: 'Explorer' },
+    { id: 'usr-2', name: 'Amira Al-Mansoor', email: 'amira@example.com', tripsCount: 7, joined: 'Aug 16, 2026', role: 'Curator' },
+    { id: 'usr-3', name: 'Clara Beaumont', email: 'clara@example.com', tripsCount: 2, joined: 'Aug 14, 2026', role: 'Explorer' },
+    { id: 'usr-4', name: 'David Zhang', email: 'david.z@example.com', tripsCount: 5, joined: 'Aug 10, 2026', role: 'Admin' }
+  ]
+};

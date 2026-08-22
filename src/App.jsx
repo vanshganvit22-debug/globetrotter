@@ -1,122 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react';
+import { AppProvider, useApp } from './context/AppContext';
+import { Navbar } from './components/navigation/Navbar';
+import { Sidebar } from './components/navigation/Sidebar';
+import { MobileNav } from './components/navigation/MobileNav';
+import { ToastContainer } from './components/ui/Toast';
+import { Modal } from './components/ui/Modal';
+
+// Screens
+import { AuthPage } from './pages/AuthPage';
+import { DashboardPage } from './pages/DashboardPage';
+import { CreateTripPage } from './pages/CreateTripPage';
+import { MyTripsPage } from './pages/MyTripsPage';
+import { ItineraryBuilderPage } from './pages/ItineraryBuilderPage';
+import { ItineraryViewPage } from './pages/ItineraryViewPage';
+import { CitySearchPage } from './pages/CitySearchPage';
+import { ActivitySearchPage } from './pages/ActivitySearchPage';
+import { BudgetPage } from './pages/BudgetPage';
+import { CalendarPage } from './pages/CalendarPage';
+import { PublicItineraryPage } from './pages/PublicItineraryPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { CommunityPage } from './pages/CommunityPage';
+import { AdminPage } from './pages/AdminPage';
+
+import './App.css';
+
+const MainAppContent = () => {
+  const { currentScreen } = useApp();
+
+  // If Auth screen is active
+  if (currentScreen === 'auth') {
+    return (
+      <>
+        <AuthPage />
+        <ToastContainer />
+        <Modal />
+      </>
+    );
+  }
+
+  // Render main application shell
+  return (
+    <div className="globetrotter-app-root">
+      <Navbar />
+
+      <div className="app-body-layout">
+        <Sidebar />
+
+        <main className="app-main-viewport">
+          {currentScreen === 'dashboard' && <DashboardPage />}
+          {currentScreen === 'my-trips' && <MyTripsPage />}
+          {currentScreen === 'create-trip' && <CreateTripPage />}
+          {currentScreen === 'itinerary-builder' && <ItineraryBuilderPage />}
+          {currentScreen === 'itinerary-view' && <ItineraryViewPage />}
+          {currentScreen === 'city-search' && <CitySearchPage />}
+          {currentScreen === 'activity-search' && <ActivitySearchPage />}
+          {currentScreen === 'budget' && <BudgetPage />}
+          {currentScreen === 'calendar' && <CalendarPage />}
+          {currentScreen === 'public-itinerary' && <PublicItineraryPage />}
+          {currentScreen === 'profile' && <ProfilePage />}
+          {currentScreen === 'community' && <CommunityPage />}
+          {currentScreen === 'admin' && <AdminPage />}
+        </main>
+      </div>
+
+      <MobileNav />
+      <ToastContainer />
+      <Modal />
+    </div>
+  );
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <AppProvider>
+      <MainAppContent />
+    </AppProvider>
+  );
 }
 
-export default App
+export default App;
