@@ -187,6 +187,7 @@ export const mockDestinations = [
     tags: ['Romantic', 'Beaches', 'Luxury', 'Views'],
     bestSeason: 'May - October',
     rating: 4.9,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Santorini',
   },
   {
     id: 'dest-2',
@@ -201,6 +202,7 @@ export const mockDestinations = [
     tags: ['Culture', 'History', 'Food', 'Temples'],
     bestSeason: 'March - May / Oct - Nov',
     rating: 4.95,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Kyoto',
   },
   {
     id: 'dest-3',
@@ -215,6 +217,7 @@ export const mockDestinations = [
     tags: ['Adventure', 'Nature', 'Hiking', 'Wildlife'],
     bestSeason: 'June - September',
     rating: 4.88,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Banff_National_Park',
   },
   {
     id: 'dest-4',
@@ -229,6 +232,7 @@ export const mockDestinations = [
     tags: ['Scenic', 'Culinary', 'Coastline', 'Romantic'],
     bestSeason: 'April - October',
     rating: 4.92,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Amalfi_Coast',
   },
   {
     id: 'dest-5',
@@ -243,6 +247,7 @@ export const mockDestinations = [
     tags: ['Adventure', 'Northern Lights', 'Geothermal', 'Road Trip'],
     bestSeason: 'Sep - March (Auroras) / Jun - Aug',
     rating: 4.87,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Reykjav%C3%ADk',
   },
   {
     id: 'dest-6',
@@ -257,6 +262,7 @@ export const mockDestinations = [
     tags: ['Culture', 'Photography', 'Budget', 'Architecture'],
     bestSeason: 'March - May / Sep - Nov',
     rating: 4.82,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Chefchaouen',
   },
   {
     id: 'dest-7',
@@ -271,6 +277,7 @@ export const mockDestinations = [
     tags: ['Adventure', 'Lakes', 'Hiking', 'Wine'],
     bestSeason: 'December - March',
     rating: 4.94,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Queenstown,_New_Zealand',
   },
   {
     id: 'dest-8',
@@ -285,6 +292,7 @@ export const mockDestinations = [
     tags: ['Wellness', 'Budget', 'Culture', 'Tropical'],
     bestSeason: 'May - September',
     rating: 4.89,
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Ubud',
   }
 ];
 

@@ -4544,6 +4544,202 @@
   margin-bottom: 20px;
 }
 
+/* Destination Card Styles */
+.destination-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dest-card-media {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dest-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.destination-card:hover .dest-img-cover {
+  transform: scale(1.04);
+}
+
+.dest-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(17, 33, 56, 0.65) 100%);
+}
+
+.dest-top-badges {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dest-cost-pill {
+  background: rgba(17, 33, 56, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.dest-save-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.dest-save-btn:hover, .dest-save-btn.saved {
+  background: #ffffff;
+}
+
+.dest-rating-pill {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.dest-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dest-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.dest-name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.dest-country {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.dest-popularity-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+  background: var(--color-gold-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.dest-description {
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.dest-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.dest-tag-pill {
+  font-size: 11.5px;
+  color: #4b5563;
+  background: var(--color-bg);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.dest-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  gap: 8px;
+}
+
+.btn-wiki-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-navy);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-wiki-link:hover {
+  background: var(--color-gold-light);
+  border-color: var(--color-gold);
+  color: var(--color-gold-dark);
+}
+
+.btn-add-destination {
+  background: var(--color-navy);
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-add-destination:hover {
+  background: var(--color-navy-hover);
+}
+
 /* ==========================================================================
    21. RESPONSIVE BREAKPOINTS
    ========================================================================== */

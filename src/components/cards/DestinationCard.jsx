@@ -1,9 +1,9 @@
 import React from 'react';
-import { Star, Plus, Bookmark, MapPin, Sparkles } from 'lucide-react';
+import { Star, Plus, Bookmark, ExternalLink } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
 export const DestinationCard = ({ destination }) => {
-  const { savedDestinations, toggleSaveDestination, addStopToActiveTrip, activeTrip } = useApp();
+  const { savedDestinations, toggleSaveDestination, addStopToActiveTrip } = useApp();
   const isSaved = savedDestinations.includes(destination.id);
 
   const handleAddCity = (e) => {
@@ -17,6 +17,8 @@ export const DestinationCard = ({ destination }) => {
       activities: []
     });
   };
+
+  const wikiLink = destination.wikipediaUrl || `https://en.wikipedia.org/wiki/${encodeURIComponent(destination.city)}`;
 
   return (
     <div className="destination-card">
@@ -60,10 +62,18 @@ export const DestinationCard = ({ destination }) => {
         </div>
 
         <div className="dest-card-bottom">
-          <div className="dest-season-info">
-            <span className="season-label">Best Season</span>
-            <span className="season-val">{destination.bestSeason}</span>
-          </div>
+          <a
+            href={wikiLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="btn-wiki-link"
+            title={`View ${destination.city} on Wikipedia`}
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            <span>Wikipedia Details</span>
+          </a>
+
           <button onClick={handleAddCity} className="btn-add-destination">
             <Plus className="w-3.5 h-3.5" />
             <span>Add to Trip</span>
@@ -73,3 +83,4 @@ export const DestinationCard = ({ destination }) => {
     </div>
   );
 };
+
