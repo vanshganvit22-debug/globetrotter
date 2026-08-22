@@ -1,4 +1,14 @@
 // Mock Data for GlobeTrotter Application
+import userPhoto1 from '../photos/WhatsApp Image 2026-08-22 at 2.40.51 PM.jpeg';
+import userPhoto2 from '../photos/WhatsApp Image 2026-08-22 at 2.40.52 PM (1).jpeg';
+import userPhoto3 from '../photos/WhatsApp Image 2026-08-22 at 2.40.52 PM (2).jpeg';
+import userPhoto4 from '../photos/WhatsApp Image 2026-08-22 at 2.40.52 PM (3).jpeg';
+import userPhoto5 from '../photos/WhatsApp Image 2026-08-22 at 2.40.52 PM.jpeg';
+import userPhoto6 from '../photos/WhatsApp Image 2026-08-22 at 2.40.53 PM (1).jpeg';
+import userPhoto7 from '../photos/WhatsApp Image 2026-08-22 at 2.40.53 PM (2).jpeg';
+import userPhoto8 from '../photos/WhatsApp Image 2026-08-22 at 2.40.53 PM (3).jpeg';
+import userPhoto9 from '../photos/WhatsApp Image 2026-08-22 at 2.40.53 PM.jpeg';
+import userPhoto10 from '../photos/WhatsApp Image 2026-08-22 at 2.40.54 PM.jpeg';
 
 export const initialTrips = [
   {
@@ -9,7 +19,7 @@ export const initialTrips = [
     endDate: '2026-09-18',
     days: 8,
     status: 'ongoing',
-    coverImage: 'https://images.unsplash.com/photo-1543429776-2782fc8e1acd?q=80&w=1200&auto=format&fit=crop',
+    coverImage: userPhoto1,
     budget: 3400,
     spent: 1850,
     destinationsCount: 3,
@@ -116,7 +126,7 @@ export const initialTrips = [
     endDate: '2026-10-25',
     days: 10,
     status: 'upcoming',
-    coverImage: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1200&auto=format&fit=crop',
+    coverImage: userPhoto10,
     budget: 4200,
     spent: 1200,
     destinationsCount: 2,
@@ -129,7 +139,7 @@ export const initialTrips = [
         country: 'Japan',
         arrivalDate: '2026-10-15',
         departureDate: '2026-10-21',
-        image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop',
+        image: userPhoto3,
         activities: [
           {
             id: 'act-jp-1',
@@ -140,16 +150,6 @@ export const initialTrips = [
             category: 'Culture',
             period: 'Morning',
             notes: 'Beat the crowds through 10,000 orange gates.',
-          },
-          {
-            id: 'act-jp-2',
-            time: '02:00 PM',
-            title: 'Traditional Uji Matcha Ceremony',
-            location: 'Gion District',
-            cost: 55,
-            category: 'Food',
-            period: 'Afternoon',
-            notes: 'Guided by 4th-generation tea master.',
           }
         ]
       }
@@ -163,7 +163,7 @@ export const initialTrips = [
     endDate: '2026-06-12',
     days: 7,
     status: 'completed',
-    coverImage: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=1200&auto=format&fit=crop',
+    coverImage: userPhoto2,
     budget: 3800,
     spent: 3720,
     destinationsCount: 3,
@@ -182,7 +182,7 @@ export const mockDestinations = [
     costIndex: '$$$$',
     avgDailyCost: 280,
     popularity: 98,
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto2,
     description: 'Whitewashed cliffside cubist villages overlooking deep azure Aegean caldera waters with legendary sunsets.',
     tags: ['Romantic', 'Beaches', 'Luxury', 'Views'],
     bestSeason: 'May - October',
@@ -197,7 +197,7 @@ export const mockDestinations = [
     costIndex: '$$$',
     avgDailyCost: 190,
     popularity: 96,
-    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto3,
     description: 'Over 1,000 Buddhist temples, tranquil moss gardens, geisha districts, and serene bamboo groves in Arashiyama.',
     tags: ['Culture', 'History', 'Food', 'Temples'],
     bestSeason: 'March - May / Oct - Nov',
@@ -212,7 +212,7 @@ export const mockDestinations = [
     costIndex: '$$$',
     avgDailyCost: 220,
     popularity: 92,
-    image: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto4,
     description: 'Towering Rocky Mountain summits surrounding vibrant electric-turquoise glacier-fed alpine waters.',
     tags: ['Adventure', 'Nature', 'Hiking', 'Wildlife'],
     bestSeason: 'June - September',
@@ -227,7 +227,7 @@ export const mockDestinations = [
     costIndex: '$$$$',
     avgDailyCost: 310,
     popularity: 95,
-    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto5,
     description: 'Pastel cliffside villas cascading into the Tyrrhenian Sea, fragrant lemon groves, and winding coastal highways.',
     tags: ['Scenic', 'Culinary', 'Coastline', 'Romantic'],
     bestSeason: 'April - October',
@@ -242,7 +242,7 @@ export const mockDestinations = [
     costIndex: '$$$$',
     avgDailyCost: 340,
     popularity: 91,
-    image: 'https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto6,
     description: 'Land of fire and ice with thunderous waterfalls, black sand beaches, geothermal lagoons, and Aurora Borealis.',
     tags: ['Adventure', 'Northern Lights', 'Geothermal', 'Road Trip'],
     bestSeason: 'Sep - March (Auroras) / Jun - Aug',
@@ -257,7 +257,7 @@ export const mockDestinations = [
     costIndex: '$$',
     avgDailyCost: 110,
     popularity: 88,
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto7,
     description: 'The famous Blue Pearl medina tucked into the Rif Mountains with vibrant leather souks and mint tea courtyards.',
     tags: ['Culture', 'Photography', 'Budget', 'Architecture'],
     bestSeason: 'March - May / Sep - Nov',
@@ -272,7 +272,7 @@ export const mockDestinations = [
     costIndex: '$$$',
     avgDailyCost: 240,
     popularity: 94,
-    image: 'https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto8,
     description: 'Adventure capital nestled along Lake Wakatipu surrounded by the Remarkables mountain range and Milford Sound.',
     tags: ['Adventure', 'Lakes', 'Hiking', 'Wine'],
     bestSeason: 'December - March',
@@ -287,7 +287,7 @@ export const mockDestinations = [
     costIndex: '$',
     avgDailyCost: 85,
     popularity: 97,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop',
+    image: userPhoto9,
     description: 'Emerald tiered rice terraces, sacred water temples, artisan craft villages, and holistic jungle retreats.',
     tags: ['Wellness', 'Budget', 'Culture', 'Tropical'],
     bestSeason: 'May - September',
