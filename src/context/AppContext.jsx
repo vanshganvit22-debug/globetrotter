@@ -5,7 +5,7 @@ import { supabase } from '../supabaseClient';
 const AppContext = createContext(null);
 
 export const AppProvider = ({ children }) => {
-  const [currentScreen, setCurrentScreen] = useState('dashboard');
+  const [currentScreen, setCurrentScreen] = useState('auth');
   const [user, setUser] = useState({
     name: 'Alexander Wright',
     email: 'alexander.wright@globetrotter.io',
